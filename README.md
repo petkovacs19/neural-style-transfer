@@ -2,6 +2,12 @@
 
 This is a tensorflow implementation of neural style transfer. Using an intersting approach shown by Leon A. Gatys, Alexander S. Ecker, and Matthias Bethge, you can use convolutional nerual networks to transfer styles of images to another image. Using convolutional layers we can generate a new image with the content of one and the style of another one.
 
+### Usage 
+
+```
+python neural_style_transfer.py -content content.jpg -style style.jpg -iterations 1000 -lr 2.0 -vgg_path imagenet-vgg-verydeep-19.mat
+```
+
 Using the Great Church of Debrecen as content image and applying the style of The Starry Night by Vincent van Gogh, we can generate a new image of Debrecen.
 <div align="center">
 	<img src="https://github.com/petkovacs19/neural-style-transfer/blob/master/images/debrecen.jpg"/>

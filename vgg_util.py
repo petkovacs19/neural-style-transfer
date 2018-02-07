@@ -50,7 +50,7 @@ def get_vgg_graph(path = "imagenet-vgg-verydeep-19.mat"):
             graph[layer_name] = tf.nn.relu(prev_layer)        
         elif "pool" in layer_name:
             #apply pool but keep previous name
-            graph[layer_name] = tf.nn.max_pool(prev_layer, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
+            graph[layer_name] = tf.nn.avg_pool(prev_layer, ksize=[1, 2, 2, 1], strides=[1, 2, 2, 1], padding='SAME')
         else:
             #do nothing for now, we wont use the fully connected layers
             break
